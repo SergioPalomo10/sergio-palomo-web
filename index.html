@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sergio Palomo | Saxofonista Profesional</title>
+
+<!-- Fuentes elegantes -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- FontAwesome para iconos redes -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<style>
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Poppins',sans-serif;background:black;color:white;scroll-behavior:smooth;}
+a{text-decoration:none;color:inherit;}
+p{line-height:1.4;margin:4px 0;}
+ul{margin:5px 0;padding-left:20px;line-height:25px;}
+
+/* MENU FIJO */
+nav{
+position:fixed;top:0;width:100%;background:#111;padding:12px;text-align:center;z-index:1000;
+}
+nav a{color:#d4af37;margin:0 12px;font-weight:500;transition:0.3s;}
+nav a:hover{color:white;}
+
+/* BOTON CONTRATAR */
+.contratar{
+background:#d4af37;padding:10px 20px;border-radius:20px;font-weight:bold;color:black;
+transition:0.3s;display:inline-block;margin:10px 0;
+}
+.contratar:hover{background:#b8962e;transform:scale(1.05);}
+
+/* HEADER */
+header{
+height:55vh;
+background:url('imagenes/portada.jpg') center/cover no-repeat;
+display:flex;align-items:center;justify-content:center;text-align:center;position:relative;
+overflow:hidden;
+}
+header::before{
+content:"";position:absolute;width:100%;height:100%;background:rgba(0,0,0,0.6);
+}
+
+/* Brillo animado en nombre */
+header h1{
+font-family:'Playfair Display';font-size:55px;color:#fff;
+position:relative;
+background: linear-gradient(90deg, #d4af37, #fff, #d4af37);
+background-size:200% auto;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+animation:shine 3s linear infinite;
+margin-bottom:5px;
+}
+@keyframes shine{
+0%{background-position:200% center;}
+100%{background-position:-200% center;}
+}
+
+header h2{color:#d4af37;margin-top:5px;}
+header p{max-width:700px;margin-top:5px;}
+
+/* SECCIONES */
+section{padding:25px 20px;max-width:1100px;margin:auto;opacity:0;transform:translateY(20px);transition:1s;}
+section.active{opacity:1;transform:translateY(0);}
+h3{text-align:center;color:#d4af37;font-family:'Playfair Display';margin-bottom:10px;}
+
+/* GALERIA */
+.galeria{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px;}
+.galeria img{
+width:100%;border-radius:15px;cursor:pointer;transition:0.4s;box-shadow:0 5px 15px rgba(0,0,0,0.5);
+}
+.galeria img:hover{transform:scale(1.05);box-shadow:0 10px 25px rgba(212,175,55,0.7);}
+
+/* LIGHTBOX IMAGEN */
+#lightbox{
+position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.9);display:none;justify-content:center;align-items:center;z-index:2000;
+}
+#lightbox img{max-width:90%;max-height:90%;border-radius:10px;}
+
+
+/* TABLA */
+table{width:100%;max-width:700px;margin:auto;border-collapse:collapse;text-align:center;}
+th,td{border:1px solid #d4af37;padding:10px;}
+th{background:#111;color:#d4af37;}
+
+/* REDES */
+.redes{text-align:center;margin-top:10px;}
+.redes button{
+background:#d4af37;border:none;padding:10px 20px;margin:8px;border-radius:12px;font-size:15px;cursor:pointer;font-weight:bold;
+transition:0.3s;display:inline-flex;align-items:center;gap:8px;
+}
+.redes button:hover{background:#b8962e;transform:scale(1.05);}
+
+/* WHATSAPP FIJO */
+.whatsapp{
+position:fixed;bottom:25px;right:25px;background:#25D366;color:white;padding:18px;border-radius:50%;font-size:22px;
+transition:0.3s;text-decoration:none;text-align:center;
+}
+.whatsapp:hover{transform:scale(1.1);}
+
+/* FOOTER */
+footer{
+text-align:center;padding:20px;color:#d4af37;font-size:14px;margin-top:30px;border-top:1px solid #d4af37;
+}
+
+/* PARTICULAS DORADAS SUAVES */
+#particles{
+position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:1;}
+.particle{
+position:absolute;background:#d4af37;border-radius:50%;opacity:0.5;width:5px;height:5px;animation:moveParticle 10s linear infinite;}
+@keyframes moveParticle{
+0%{transform:translateY(0);}
+100%{transform:translateY(-800px);}
+}
+</style>
+</head>
+<body>
+
+<!-- PARTICULAS -->
+<div id="particles"></div>
+
+<!-- MENÚ -->
+<nav>
+<a href="#experiencia">Experiencia</a>
+<a href="#galeria">Galería</a>
+<a href="#catalogo">Precios</a>
+<a href="#contacto">Contacto</a>
+</nav>
+
+<!-- BOTÓN CONTRATAR -->
+<div style="text-align:center;margin-top:70px;">
+<a href="https://wa.me/50431858259" target="_blank" class="contratar">🎷 Contratar Ahora</a>
+</div>
+
+<!-- HEADER -->
+<header>
+<div>
+<h1>SERGIO PALOMO</h1>
+<h2>Saxofonista Profesional</h2>
+<p>Músico con 15 años de experiencia creando ambientes perfectos para todo tipo de eventos.<br>Director de la banda marcial de la Fuerza Naval de Honduras.</p>
+</div>
+</header>
+
+<!-- EXPERIENCIA -->
+<section id="experiencia">
+<h3>Experiencia</h3>
+<ul>
+<li>Banda sinfónica de las Fuerzas Armadas de Honduras</li>
+<li>Miembro fundador de la banda sinfónica de la juventud</li>
+<li>Son de Tepas</li>
+<li>Orquesta Delicias</li>
+<li>Los Silver Star</li>
+<li>Los Profesionales de Honduras</li>
+<li>Los Roland</li>
+<li>Grupo Kandela</li>
+<li>La Gran Banda</li>
+</ul>
+<ul>
+<li>Impacto Latino – España 🇪🇸</li>
+<li>Salserín – Venezuela 🇻🇪</li>
+<li>DLG – Estados Unidos 🇺🇸</li>
+<li>Elvis Crespo – Puerto Rico 🇵🇷</li>
+<li>El Jeffrey – República Dominicana 🇩🇴</li>
+</ul>
+</section>
+
+<!-- GALERÍA -->
+<section id="galeria">
+<h3>Galería de Eventos</h3>
+<div class="galeria">
+<img src="imagenes/imagen1.jpeg" alt="">
+<img src="imagenes/imagen2.jpeg" alt="">
+<img src="imagenes/imagen3.jpeg" alt="">
+<img src="imagenes/imagen4.jpeg" alt="">
+<img src="imagenes/imagen5.jpeg" alt="">
+<img src="imagenes/imagen6.jpeg" alt="">
+<img src="imagenes/imagen7.jpeg" alt="">
+<img src="imagenes/imagen8.jpeg" alt="">
+<img src="imagenes/imagen9.jpeg" alt="">
+<img src="imagenes/imagen10.jpeg" alt="">
+<img src="imagenes/imagen11.jpeg" alt="">
+<img src="imagenes/imagen12.JFIF" alt="">
+<img src="imagenes/imagen13.JFIF" alt="">
+<img src="imagenes/imagen14.JFIF" alt="">
+<img src="imagenes/imagen15.JFIF" alt="">
+<img src="imagenes/imagen16.JFIF" alt="">
+</div>
+</section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox"><img src="" alt=""></div>
+
+
+<h3>Videos</h3>
+<div class="videos">
+<video controls src="videos/video1.mp4"></video>
+<video controls src="videos/video2.mp4"></video>
+<video controls src="videos/video3.mp4"></video>
+<video controls src="videos/video4.mp4"></video>
+<video controls src="videos/video5.mp4"></video>
+<video controls src="videos/video6.mp4"></video>
+<video controls src="videos/video7.mp4"></video>
+<video controls src="videos/video8.mp4"></video>
+</div>
+</section>
+
+<!-- TABLA DE PRECIOS -->
+<section id="catalogo">
+<h3>Precio por Evento</h3>
+<table>
+<tr><th>Servicio</th><th>Precio</th><th>Duración</th></tr>
+<tr><td>Sax Signature</td><td>L. 2,500</td><td>1 hora</td></tr>
+<tr><td>Sax Experience</td><td>L. 4,500</td><td>2 horas</td></tr>
+<tr><td>Sax Premium Set</td><td>L. 6,000</td><td>3 horas</td></tr>
+<tr><td>Sax Master Set</td><td>L. 7,500</td><td>4 horas</td></tr>
+</table>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+<h3>Contacto</h3>
+<p>Teléfono: +504 3185-8259</p>
+<p>Email: sergiosax2093@hotmail.com</p>
+<div class="redes">
+<a href="https://wa.me/50431858259" target="_blank"><button><i class="fab fa-whatsapp"></i> WhatsApp</button></a>
+<a href="https://www.instagram.com/sergiosaxhn" target="_blank"><button><i class="fab fa-instagram"></i> Instagram</button></a>
+<a href="https://www.facebook.com/share/1DGbXpqDTZ/" target="_blank"><button><i class="fab fa-facebook-f"></i> Facebook</button></a>
+<a href="https://www.tiktok.com/@sergiosax10" target="_blank"><button><i class="fab fa-tiktok"></i> TikTok</button></a>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+© 2026 Sergio Palomo. Todos los derechos reservados.
+</footer>
+
+<!-- BOTÓN WHATSAPP FIJO -->
+<a class="whatsapp" href="https://wa.me/50431858259">💬</a>
+
+<script>
+// ANIMACIÓN SCROLL
+const sections=document.querySelectorAll('section');
+window.addEventListener('scroll',()=>{
+sections.forEach(section=>{
+const top=section.getBoundingClientRect().top;
+if(top<window.innerHeight-100){section.classList.add('active');}
+});
+});
+
+// LIGHTBOX
+const lightbox=document.getElementById('lightbox');
+const lightboxImg=lightbox.querySelector('img');
+document.querySelectorAll('.galeria img').forEach(img=>{
+img.addEventListener('click',()=>{
+lightbox.style.display='flex';
+lightboxImg.src=img.src;
+});
+});
+lightbox.addEventListener('click',()=>{lightbox.style.display='none';});
+
+// PARTICULAS DORADAS SUAVES
+const particlesContainer = document.getElementById('particles');
+for(let i=0;i<50;i++){
+let p=document.createElement('div');
+p.classList.add('particle');
+p.style.left=Math.random()*100+'%';
+p.style.top=Math.random()*100+'%';
+p.style.width=(Math.random()*4+2)+'px';
+p.style.height=p.style.width;
+p.style.animationDuration=(Math.random()*8+5)+'s';
+particlesContainer.appendChild(p);
+}
+</script>
+
+</body>
+</html>
